@@ -148,12 +148,12 @@ Partial Class Form1
         ' 
         DaftarBuku.BackColor = Color.WhiteSmoke
         DaftarBuku.BorderStyle = BorderStyle.FixedSingle
-        DaftarBuku.Font = New Font("Consolas", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DaftarBuku.Font = New Font("Consolas", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DaftarBuku.ForeColor = Color.DarkSlateGray
         DaftarBuku.FormattingEnabled = True
         DaftarBuku.Location = New Point(44, 225)
         DaftarBuku.Name = "DaftarBuku"
-        DaftarBuku.Size = New Size(712, 182)
+        DaftarBuku.Size = New Size(712, 163)
         DaftarBuku.TabIndex = 4
         ' 
         ' Form1

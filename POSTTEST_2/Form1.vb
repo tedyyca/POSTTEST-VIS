@@ -2,17 +2,17 @@
     Private Sub UpdateList(ByRef daftar As ListBox)
         daftar.Items.Clear()
         Dim i As Integer
-        For i = 0 To isiSekarang - 1
+        For i = 0 To jumlahBuku - 1
             daftar.Items.Add(rakBuku(i, 0) & " (" & rakBuku(i, 1) & ")")
         Next
     End Sub
 
     Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
         If txtJudulTambah.Text <> "" And txtGenre.Text <> "" Then
-            If isiSekarang < 100 Then
-                rakBuku(isiSekarang, 0) = txtJudulTambah.Text
-                rakBuku(isiSekarang, 1) = txtGenre.Text
-                isiSekarang += 1
+            If jumlahBuku < 100 Then
+                rakBuku(jumlahBuku, 0) = txtJudulTambah.Text
+                rakBuku(jumlahBuku, 1) = txtGenre.Text
+                jumlahBuku += 1
 
                 UpdateList(DaftarBuku)
 
@@ -29,11 +29,11 @@
 
         If posisi <> -1 Then
             Dim j As Integer
-            For j = posisi To isiSekarang - 2
+            For j = posisi To jumlahBuku - 2
                 rakBuku(j, 0) = rakBuku(j + 1, 0)
                 rakBuku(j, 1) = rakBuku(j + 1, 1)
             Next
-            isiSekarang -= 1
+            jumlahBuku -= 1
             UpdateList(DaftarBuku)
             txtJudulHapus.Clear()
         Else
