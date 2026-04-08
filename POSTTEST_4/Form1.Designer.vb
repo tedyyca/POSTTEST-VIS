@@ -157,7 +157,7 @@ Partial Class Form1
         ' 
         ' t
         ' 
-        t.BackColor = Color.White
+        t.BackColor = Color.Crimson
         t.Controls.Add(Label6)
         t.Controls.Add(Label5)
         t.Controls.Add(Label4)
@@ -179,6 +179,7 @@ Partial Class Form1
         ' Label6
         ' 
         Label6.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label6.ForeColor = SystemColors.ControlLightLight
         Label6.Location = New Point(20, 190)
         Label6.Name = "Label6"
         Label6.Size = New Size(100, 23)
@@ -188,15 +189,17 @@ Partial Class Form1
         ' Label5
         ' 
         Label5.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label5.ForeColor = SystemColors.ControlLightLight
         Label5.Location = New Point(20, 150)
         Label5.Name = "Label5"
-        Label5.Size = New Size(100, 23)
+        Label5.Size = New Size(124, 23)
         Label5.TabIndex = 1
         Label5.Text = "Jenis Kelamin"
         ' 
         ' Label4
         ' 
         Label4.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label4.ForeColor = SystemColors.ButtonHighlight
         Label4.Location = New Point(20, 110)
         Label4.Name = "Label4"
         Label4.Size = New Size(100, 23)
@@ -206,6 +209,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label3.ForeColor = SystemColors.ButtonFace
         Label3.Location = New Point(20, 70)
         Label3.Name = "Label3"
         Label3.Size = New Size(100, 23)
@@ -215,6 +219,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label2.ForeColor = SystemColors.HighlightText
         Label2.Location = New Point(20, 30)
         Label2.Name = "Label2"
         Label2.Size = New Size(120, 23)
@@ -234,6 +239,7 @@ Partial Class Form1
         ' rbPerempuan
         ' 
         rbPerempuan.AutoSize = True
+        rbPerempuan.ForeColor = SystemColors.ButtonHighlight
         rbPerempuan.Location = New Point(260, 150)
         rbPerempuan.Name = "rbPerempuan"
         rbPerempuan.Size = New Size(104, 24)
@@ -243,6 +249,7 @@ Partial Class Form1
         ' rbLaki
         ' 
         rbLaki.AutoSize = True
+        rbLaki.ForeColor = SystemColors.ButtonHighlight
         rbLaki.Location = New Point(150, 150)
         rbLaki.Name = "rbLaki"
         rbLaki.Size = New Size(88, 24)
@@ -251,6 +258,8 @@ Partial Class Form1
         ' 
         ' dtpTglLahir
         ' 
+        dtpTglLahir.CalendarForeColor = Color.Crimson
+        dtpTglLahir.CalendarTitleForeColor = Color.Crimson
         dtpTglLahir.Location = New Point(150, 110)
         dtpTglLahir.Name = "dtpTglLahir"
         dtpTglLahir.Size = New Size(200, 27)
@@ -274,7 +283,7 @@ Partial Class Form1
         ' 
         ' t1
         ' 
-        t1.BackColor = Color.White
+        t1.BackColor = Color.Crimson
         t1.Controls.Add(Label9)
         t1.Controls.Add(Label8)
         t1.Controls.Add(Label7)
@@ -291,6 +300,7 @@ Partial Class Form1
         ' Label9
         ' 
         Label9.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label9.ForeColor = SystemColors.ButtonFace
         Label9.Location = New Point(30, 120)
         Label9.Name = "Label9"
         Label9.Size = New Size(100, 23)
@@ -300,6 +310,7 @@ Partial Class Form1
         ' Label8
         ' 
         Label8.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label8.ForeColor = SystemColors.ButtonHighlight
         Label8.Location = New Point(30, 80)
         Label8.Name = "Label8"
         Label8.Size = New Size(100, 23)
@@ -308,7 +319,9 @@ Partial Class Form1
         ' 
         ' Label7
         ' 
+        Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label7.ForeColor = Color.Snow
         Label7.Location = New Point(30, 40)
         Label7.Name = "Label7"
         Label7.Size = New Size(100, 23)
@@ -343,7 +356,7 @@ Partial Class Form1
         ' 
         ' tMenu
         ' 
-        tMenu.BackColor = Color.White
+        tMenu.BackColor = Color.Crimson
         tMenu.Controls.Add(btnSimpanCetak)
         tMenu.Controls.Add(btnBrowse)
         tMenu.Controls.Add(CheckBox8)
@@ -365,7 +378,7 @@ Partial Class Form1
         ' 
         ' btnSimpanCetak
         ' 
-        btnSimpanCetak.BackColor = Color.Crimson
+        btnSimpanCetak.BackColor = Color.DarkOliveGreen
         btnSimpanCetak.FlatStyle = FlatStyle.Flat
         btnSimpanCetak.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         btnSimpanCetak.ForeColor = Color.White
@@ -378,8 +391,9 @@ Partial Class Form1
         ' 
         ' btnBrowse
         ' 
-        btnBrowse.BackColor = Color.WhiteSmoke
+        btnBrowse.BackColor = Color.DarkOliveGreen
         btnBrowse.FlatStyle = FlatStyle.Flat
+        btnBrowse.ForeColor = SystemColors.ButtonFace
         btnBrowse.Location = New Point(130, 20)
         btnBrowse.Name = "btnBrowse"
         btnBrowse.Size = New Size(100, 30)
@@ -389,6 +403,7 @@ Partial Class Form1
         ' 
         ' CheckBox8
         ' 
+        CheckBox8.ForeColor = SystemColors.ButtonFace
         CheckBox8.Location = New Point(380, 120)
         CheckBox8.Name = "CheckBox8"
         CheckBox8.Size = New Size(104, 24)
@@ -397,6 +412,7 @@ Partial Class Form1
         ' 
         ' CheckBox7
         ' 
+        CheckBox7.ForeColor = SystemColors.ButtonHighlight
         CheckBox7.Location = New Point(380, 90)
         CheckBox7.Name = "CheckBox7"
         CheckBox7.Size = New Size(104, 24)
@@ -405,6 +421,7 @@ Partial Class Form1
         ' 
         ' CheckBox6
         ' 
+        CheckBox6.ForeColor = SystemColors.ButtonHighlight
         CheckBox6.Location = New Point(380, 60)
         CheckBox6.Name = "CheckBox6"
         CheckBox6.Size = New Size(104, 24)
@@ -413,6 +430,7 @@ Partial Class Form1
         ' 
         ' CheckBox5
         ' 
+        CheckBox5.ForeColor = SystemColors.ButtonHighlight
         CheckBox5.Location = New Point(380, 30)
         CheckBox5.Name = "CheckBox5"
         CheckBox5.Size = New Size(104, 24)
@@ -421,6 +439,7 @@ Partial Class Form1
         ' 
         ' CheckBox4
         ' 
+        CheckBox4.ForeColor = SystemColors.ButtonFace
         CheckBox4.Location = New Point(250, 120)
         CheckBox4.Name = "CheckBox4"
         CheckBox4.Size = New Size(104, 24)
@@ -429,6 +448,7 @@ Partial Class Form1
         ' 
         ' CheckBox3
         ' 
+        CheckBox3.ForeColor = SystemColors.ButtonHighlight
         CheckBox3.Location = New Point(250, 90)
         CheckBox3.Name = "CheckBox3"
         CheckBox3.Size = New Size(104, 24)
@@ -437,6 +457,7 @@ Partial Class Form1
         ' 
         ' CheckBox2
         ' 
+        CheckBox2.ForeColor = SystemColors.ButtonHighlight
         CheckBox2.Location = New Point(250, 60)
         CheckBox2.Name = "CheckBox2"
         CheckBox2.Size = New Size(104, 24)
@@ -445,6 +466,7 @@ Partial Class Form1
         ' 
         ' CheckBox1
         ' 
+        CheckBox1.ForeColor = SystemColors.ButtonFace
         CheckBox1.Location = New Point(250, 30)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(104, 24)
@@ -466,7 +488,7 @@ Partial Class Form1
         ' 
         ' rbAdmin
         ' 
-        rbAdmin.ForeColor = Color.Black
+        rbAdmin.ForeColor = Color.Gainsboro
         rbAdmin.Location = New Point(10, 75)
         rbAdmin.Name = "rbAdmin"
         rbAdmin.Size = New Size(104, 24)
@@ -475,7 +497,7 @@ Partial Class Form1
         ' 
         ' rbAnggota
         ' 
-        rbAnggota.ForeColor = Color.Black
+        rbAnggota.ForeColor = Color.WhiteSmoke
         rbAnggota.Location = New Point(10, 50)
         rbAnggota.Name = "rbAnggota"
         rbAnggota.Size = New Size(104, 24)
@@ -484,7 +506,7 @@ Partial Class Form1
         ' 
         ' rbKetua
         ' 
-        rbKetua.ForeColor = Color.Black
+        rbKetua.ForeColor = Color.WhiteSmoke
         rbKetua.Location = New Point(10, 25)
         rbKetua.Name = "rbKetua"
         rbKetua.Size = New Size(104, 24)
