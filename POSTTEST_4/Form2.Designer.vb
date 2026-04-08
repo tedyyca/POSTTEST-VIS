@@ -137,6 +137,7 @@ Partial Class FormHasil
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(800, 460)
         Controls.Add(btnTutup)
         Controls.Add(pnlKartu)

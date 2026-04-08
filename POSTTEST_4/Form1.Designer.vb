@@ -135,6 +135,7 @@ Partial Class Form1
         ' 
         ' pbLogo
         ' 
+        pbLogo.Image = My.Resources.Resources._6324472bbc646ffd0a122fddfa0b9798
         pbLogo.Location = New Point(12, 80)
         pbLogo.Name = "pbLogo"
         pbLogo.Size = New Size(100, 100)
@@ -224,7 +225,6 @@ Partial Class Form1
         ' 
         cbDivisi.DropDownStyle = ComboBoxStyle.DropDownList
         cbDivisi.FormattingEnabled = True
-
         cbDivisi.Items.AddRange(New Object() {"Divisi A1", "Divisi A2", "Divisi A3", "Divisi A4", "Divisi A5"})
         cbDivisi.Location = New Point(150, 190)
         cbDivisi.Name = "cbDivisi"
