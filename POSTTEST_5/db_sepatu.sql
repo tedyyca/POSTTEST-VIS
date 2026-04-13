@@ -21,16 +21,17 @@ USE `db_sepatu`;
 
 -- Dumping structure for table db_sepatu.tb_sepatu
 CREATE TABLE IF NOT EXISTS `tb_sepatu` (
-  `id_sepatu` int NOT NULL DEFAULT '0',
+  `id_sepatu` int NOT NULL AUTO_INCREMENT,
   `merk` varchar(50) DEFAULT NULL,
   `Ukuran` int DEFAULT NULL,
   `Stok` int DEFAULT NULL,
   PRIMARY KEY (`id_sepatu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table db_sepatu.tb_sepatu: ~1 rows (approximately)
+-- Dumping data for table db_sepatu.tb_sepatu: ~0 rows (approximately)
 INSERT INTO `tb_sepatu` (`id_sepatu`, `merk`, `Ukuran`, `Stok`) VALUES
-	(0, 'Nineten', 22, 1);
+	(1, 'Adidas', 34, 5),
+	(2, 'Nike', 22, 6);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

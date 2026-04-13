@@ -16,7 +16,6 @@
         dgvSepatu = New DataGridView()
         txtCari = New TextBox()
         btnCari = New Button()
-        btnProses = New Button()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
@@ -52,19 +51,6 @@
         btnCari.TabIndex = 2
         btnCari.Text = "Cari Merk"
         btnCari.UseVisualStyleBackColor = False
-        ' 
-        ' btnProses
-        ' 
-        btnProses.BackColor = Color.MediumSeaGreen
-        btnProses.FlatStyle = FlatStyle.Flat
-        btnProses.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
-        btnProses.ForeColor = Color.White
-        btnProses.Location = New Point(12, 310)
-        btnProses.Name = "btnProses"
-        btnProses.Size = New Size(120, 35)
-        btnProses.TabIndex = 3
-        btnProses.Text = "Aksi"
-        btnProses.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -106,7 +92,6 @@
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(Label1)
-        Controls.Add(btnProses)
         Controls.Add(btnCari)
         Controls.Add(txtCari)
         Controls.Add(dgvSepatu)
@@ -122,7 +107,6 @@
     Friend WithEvents dgvSepatu As DataGridView
     Friend WithEvents txtCari As TextBox
     Friend WithEvents btnCari As Button
-    Friend WithEvents btnProses As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox

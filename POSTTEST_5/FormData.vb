@@ -25,13 +25,13 @@
         End If
     End Sub
 
-    Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
+    Private Sub btnProses_Click(sender As Object, e As EventArgs)
         If dgvSepatu.CurrentRow Is Nothing OrElse dgvSepatu.CurrentRow.Index < 0 Then
             MessageBox.Show("Pilih data terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
-        Dim id As String = dgvSepatu.CurrentRow.Cells(0).Value.ToString()
+        Dim id = dgvSepatu.CurrentRow.Cells(0).Value.ToString
 
         If ModeForm = "Edit" Then
             FormInput.isEdit = True
@@ -39,7 +39,7 @@
             FormInput.ShowDialog()
             Tampil()
         ElseIf ModeForm = "Hapus" Then
-            Dim hasil As DialogResult = MessageBox.Show("Apakah data " & id & " ingin dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            Dim hasil = MessageBox.Show("Apakah data " & id & " ingin dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If hasil = DialogResult.Yes Then
                 If HapusSepatu(id) Then
