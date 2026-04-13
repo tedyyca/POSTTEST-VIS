@@ -2,10 +2,7 @@
     Public ModeForm As String
 
     Private Sub FormData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Menghubungkan tabel data ke DataGridView
-        dgvSepatu.DataSource = dtSepatu
-
-        ' Mengatur tampilan tombol berdasarkan pilihan menu
+        Tampil()
         If ModeForm = "Lihat" Then
             btnProses.Visible = False
         Else
@@ -14,32 +11,42 @@
         End If
     End Sub
 
-    ' Fitur Mencari Data Sepatu
-    Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
-        ' Menyaring data berdasarkan Merk yang diketikkan pada txtCari
-        dtSepatu.DefaultView.RowFilter = String.Format("Merk LIKE '%{0}%'", txtCari.Text)
+    Private Sub Tampil()
+        dgvSepatu.DataSource = GetAllSepatu()
     End Sub
 
-    Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
-        ' Memastikan ada baris yang dipilih di tabel
-        If dgvSepatu.CurrentRow Is Nothing Then Return
+    Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
+        dgvSepatu.DataSource = SearchSepatu(txtCari.Text.Trim())
+    End Sub
 
-        If ModeForm = "Edit" Then
-            ' Membuka form input dengan membawa data lama untuk diupdate
-            FormInput.isEdit = True
-            FormInput.IDLama = dgvSepatu.CurrentRow.Cells(0).Value.ToString()
-            FormInput.ShowDialog()
-            Me.Close()
-        ElseIf ModeForm = "Hapus" Then
-            ' Konfirmasi penghapusan data
-            Dim hasil As DialogResult = MessageBox.Show("Hapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo)
-            If hasil = DialogResult.Yes Then
-                dgvSepatu.Rows.Remove(dgvSepatu.CurrentRow)
-            End If
+    Private Sub dgvSepatu_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSepatu.CellClick
+        If e.RowIndex >= 0 Then
+            ' Baris terpilih secara otomatis menjadi CurrentRow
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
+        If dgvSepatu.CurrentRow Is Nothing OrElse dgvSepatu.CurrentRow.Index < 0 Then
+            MessageBox.Show("Pilih data terlebih dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
 
+        Dim id As String = dgvSepatu.CurrentRow.Cells(0).Value.ToString()
+
+        If ModeForm = "Edit" Then
+            FormInput.isEdit = True
+            FormInput.IDTerpilih = id
+            FormInput.ShowDialog()
+            Tampil()
+        ElseIf ModeForm = "Hapus" Then
+            Dim hasil As DialogResult = MessageBox.Show("Apakah data " & id & " ingin dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If hasil = DialogResult.Yes Then
+                If HapusSepatu(id) Then
+                    MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Tampil()
+                End If
+            End If
+        End If
     End Sub
 End Class
